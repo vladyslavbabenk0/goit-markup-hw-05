@@ -17,9 +17,7 @@ body {
     line-height: 1.5;  
 }
 .container {
-    
     max-width: 1158px;
-
     padding: 0 15px;
     margin: 0 auto; 
 }
@@ -62,7 +60,7 @@ img {
     height: auto;
 }
 
-/*------------------------HEADER------------------------*/
+/*----------------------------------HEADER*/
 .header {
     border-bottom: 1px solid #E7E9FC;
 }
@@ -111,7 +109,7 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: var(--hover-transition);
+    transition: color var(--hover-transition);
 }
 
 .site-nav .nav-link {
@@ -127,10 +125,11 @@ img {
 .site-nav .nav-link:focus {
     color: var(--color-hover);
 }
-.current {
-    position: relative;
-}
 
+.nav-link.current {
+    position: relative;
+    color: var(--color-hover);
+}
 .current::after {
     position: absolute;
     display: block;
@@ -141,7 +140,7 @@ img {
     bottom: -1px;
     border-radius: 2px;
     background-color: var(--color-hover);
-    transition: var(--hover-transition);
+    transition: color var(--hover-transition);
 }
 
 
@@ -168,7 +167,7 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: var(--hover-transition);
+    transition: color  var(--hover-transition);
     
 }
 
@@ -182,7 +181,7 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: var(--hover-transition);
+    transition: color var(--hover-transition);
 }
 .site-auth .phone:hover,
 .site-auth .phone:focus {
@@ -191,7 +190,7 @@ img {
 .contacts:not(:last-child) {
     margin-right: 40px;
 }
-/*------------------------HERO------------------------*/
+/* ----------------------------------HERO */
 .section-hero {
     background-color: var(--color-second-text);  
     padding-top: 188px;
@@ -224,7 +223,7 @@ img {
 }
 
 
-/*------------------------BUTTON PRIMARY------------------------*/
+/* ------------------------BUTTON PRIMARY */
 .primary-button {
     background-color: var(--color-accent);
     color: var(--background-white-color);
@@ -241,7 +240,8 @@ img {
     padding: 16px 32px;
     min-width: 169px;
     min-height: 56px; 
-    transition: var(--hover-transition); 
+    transition: background-color var(--hover-transition),
+    color var(--hover-transition); 
             
 }
 
@@ -250,7 +250,7 @@ img {
     background-color: var(--color-hover);
     color:var(--background-white-color)
 }
-/*------------------------SECTION-WORK------------------------*/
+/*----------------------------SECTION-WORK*/
 .section-team {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -288,7 +288,7 @@ width: calc((100% - 72px) / 4);
     margin-bottom: 8px;
     background-color: var(--color-second-white);
 }
-/*------------------------OUR-TEAM------------------------*/
+/* ------------------------------OUR-TEAM */
 .items {
     display:flex;   
 }
@@ -367,7 +367,7 @@ width: calc((100% - 48px) / 3);
     height: 100%;
     background: #4D5AE5;
     border-radius: 50%;
-    transition: var(--hover-transition);
+    transition: background-color var(--hover-transition);
     
   
     
@@ -392,7 +392,7 @@ width: calc((100% - 48px) / 3);
 .section-work {
     padding-bottom: 120px;
 }
-/*------------------------PORTFOLIO------------------------*/
+/* -----------------------------PORTFOLIO */
 .section-portfolio {
     padding-top: 96px;
     padding-bottom: 120px;
@@ -410,7 +410,7 @@ width: calc((100% - 48px) / 3);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
        
 }
-/*------------------------OVERLAY------------------------ */
+/* --------------------------------OVERLaY */
 .product-thumb {
     position: relative;
     overflow: hidden;  
@@ -421,32 +421,27 @@ width: calc((100% - 48px) / 3);
     top: 0;
     width: 100%;
     height: 100%;
+    padding: 40px 32px 164px 32px;
     background-color: var(--color-accent);
     transform: translateY(100%);
     transition: transform var(--hover-transition);
          
 }
 
-.item:hover .overlay {
+.link-card:hover .overlay, .link-card:focus .overlay {
     transform: translateY(0);
 }
  .overlay-text {
-    position: absolute;
-    display: block;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-second-white);
-    width: 296px;
-    height: 96px;
-    left: 32px;
-    top: 40px;
 }
 
 .link-card {
     display: block;
-    transition: var(--hover-transition);
+    transition: box-shadow var(--hover-transition);
 }
 
 .link-card:hover,
@@ -461,7 +456,7 @@ width: calc((100% - 48px) / 3);
     border-top: none;
     padding: 32px 16px ; 
 }
-/*------------------------BUTTON------------------------*/
+/* ------------------------------------------BUTTON */
 .button {
     background-color: var(--color-second-white);
     color: var(--color-accent);
@@ -476,7 +471,9 @@ width: calc((100% - 48px) / 3);
     border-radius: 4px;
     border: 1px solid #E7E9FC;
     padding:12px 24px;
-    transition: var(--hover-transition);
+    transition: background-color var(--hover-transition),
+    color var(--hover-transition), border-color var(--hover-transition),
+    box-shadow var(--hover-transition) ;
 }
 
 .button:hover,
@@ -497,7 +494,7 @@ width: calc((100% - 48px) / 3);
 .button-list .second-button:not(:last-child) {
     margin-right: 24px;
 }
-/*------------------------CUSTOMERS------------------------*/
+/* -----------------------------------------CUSTOMERS*/
 .section-customers {
     padding-top: 130px;
     padding-bottom: 120px;
@@ -528,7 +525,8 @@ width: calc((100% - 48px) / 3);
     border: 1px solid var(--color-border);
     border-radius: 4px;
     fill: var(--color-border); 
-    transition: var(--hover-transition);
+    transition: fill var(--hover-transition),
+    border-color var(--hover-transition);
      
 }
 .customers-link:hover,
@@ -537,7 +535,7 @@ width: calc((100% - 48px) / 3);
     border-color: var(--color-hover);
 }
 
-/*------------------------FOOTER------------------------*/
+/*--------------------==----------------------FOOTER */
 
 .footer {
     background-color: var(--color-second-text);
@@ -597,7 +595,7 @@ width: calc((100% - 48px) / 3);
    fill: var(--color-second-white);
    background: rgba(255, 255, 255, 0.1);
    border-radius: 50%;
-   transition: var(--hover-transition);
+   transition: background-color var(--hover-transition);
    
    
 
@@ -606,10 +604,10 @@ width: calc((100% - 48px) / 3);
 .footer-link:focus {
     background-color: #31D0AA;
 }
-/*------------------------MODAL------------------------*/
+/* -----------------------------------------MODaL*/
 .backdrop.is-hidden {
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none;   
     visibility: hidden;
 }
 .backdrop {
@@ -620,7 +618,8 @@ width: calc((100% - 48px) / 3);
     width: 100%;
     height:100%;
     background-color:rgba(46, 47, 66, 0.4);
-    transition: opacity visibility var(--hover-transition);  
+    transition: visibility var(--hover-transition),
+     opacity var(--hover-transition);  
     
 }
 .modal {
@@ -634,10 +633,11 @@ width: calc((100% - 48px) / 3);
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
 }
 
 .modal-btn {
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -645,16 +645,19 @@ width: calc((100% - 48px) / 3);
     width: 24px;
     height: 24px;
     top: 24px;
-    left: 360px;
+    right: 24px;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;  
-    transition: var(--hover-transition);
+    fill: #000000;
+    transition: background-color var(--hover-transition),
+    fill var(--hover-transition);
 }
 .modal-btn:hover,
 .modal-btn:focus {
-    background-color: var(--color-hover);
+    background: var(--color-hover);
+    fill: var(--background-white-color);
 }
 
     
